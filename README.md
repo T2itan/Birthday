@@ -1,4 +1,4 @@
-#CS50 Birthdays
+# CS50 Birthdays
 
 A lightweight web application that allows users to keep track of birthdays. This project demonstrates the integration of a Python Flask backend with a SQLite database and a dynamic HTML/CSS frontend.
 
