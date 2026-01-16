@@ -27,15 +27,13 @@ birthdays/
 │   └── styles.css   # Custom CSS for the frontend design
 └── templates/       # Jinja2 templates for the user interface
     └── index.html   # The main (and only) page for the application
-    ### Key File Responsibilities
 
+### Key File Responsibilities
 app.py: The "brain" of the project. It configures the Flask application and provides the routes for GET (viewing birthdays) and POST (saving new birthdays).
-
 birthdays.db: A relational database. This is where your data persists so that your birthdays aren't lost when you close the browser.
-
 templates/index.html: Contains the HTML structure and uses Jinja2 syntax (like {% for ... %}) to dynamically generate the table rows from the database.
-
 static/styles.css: Used to override default Bootstrap styles or add custom flair to your "Add Birthday" form.
+
 ## Database Schema
 The project uses a single table named birthdays within the birthdays.db file.
 
