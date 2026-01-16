@@ -21,10 +21,21 @@ Frontend: HTML5, CSS3 (via Bootstrap 5), and Jinja2 templating.
 ## Project Structure
 Plaintext
 birthdays/
-├── app.py           # Flask application logic and SQL queries
-├── birthdays.db     # SQLite database containing the birthdays table
-├── static/          # CSS styles and UI enhancements
-└── templates/       # HTML files (index.html)
+├── app.py           # Python backend; handles routing and SQL logic
+├── birthdays.db     # SQLite database; stores name, month, and day data
+├── static/          # Contains static assets like styles.css
+│   └── styles.css   # Custom CSS for the frontend design
+└── templates/       # Jinja2 templates for the user interface
+    └── index.html   # The main (and only) page for the application
+    ### Key File Responsibilities
+
+app.py: The "brain" of the project. It configures the Flask application and provides the routes for GET (viewing birthdays) and POST (saving new birthdays).
+
+birthdays.db: A relational database. This is where your data persists so that your birthdays aren't lost when you close the browser.
+
+templates/index.html: Contains the HTML structure and uses Jinja2 syntax (like {% for ... %}) to dynamically generate the table rows from the database.
+
+static/styles.css: Used to override default Bootstrap styles or add custom flair to your "Add Birthday" form.
 ## Database Schema
 The project uses a single table named birthdays within the birthdays.db file.
 
